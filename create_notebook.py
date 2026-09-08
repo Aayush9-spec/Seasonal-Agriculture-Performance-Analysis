@@ -577,7 +577,7 @@ notebook = {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## 15. Project Submission Checklist\n",
+    "## 17. Project Checklist\n",
     "\n",
     "Before submission, confirm that your notebook includes:\n",
     "\n",
@@ -611,7 +611,15 @@ notebook = {
  "nbformat_minor": 2
 }
 
-with open('/Volumes/Crucial X9/projects /project /Seasonal-Agriculture-Performance-Analysis/Seasonal_Agriculture_Performance_Analysis.ipynb', 'w') as f:
-    json.dump(notebook, f, indent=1)
+# Save under both standard filenames for complete compatibility
+paths = [
+    '/Volumes/Crucial X9/projects /project /Seasonal-Agriculture-Performance-Analysis/Seasonal_Agriculture_Performance_Analysis.ipynb',
+    '/Volumes/Crucial X9/projects /project /Seasonal-Agriculture-Performance-Analysis/Seasonal_Agriculture_Performance_Data_Analytics.ipynb'
+]
 
-print("Notebook generated successfully with full Project Checklist compliance!")
+for path in paths:
+    with open(path, 'w') as f:
+        json.dump(notebook, f, indent=1)
+
+print("Notebooks generated successfully with full Project Checklist compliance!")
+
